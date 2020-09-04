@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionsButton : MonoBehaviour
+public class Backbutton : MonoBehaviour
 {
     public GameObject actionButton;
     public GameObject PropertiesButton;
@@ -15,15 +15,14 @@ public class ActionsButton : MonoBehaviour
 
     //function when the button is clicked
     public void ClickActionButton()
-        {
-            actionButton.SetActive(false);
-            PropertiesButton.SetActive(false);
-            StatsButton.SetActive(false);
-            familyButton.SetActive(false);
-            WorkButton.SetActive(true);
-            changeskillButton.SetActive(true);
-            trainButton.SetActive(true);
-            backButton.SetActive(true);
+    {
+        actionButton.SetActive(true);
+        PropertiesButton.SetActive(true);
+        StatsButton.SetActive(true);
+        familyButton.SetActive(true);
+        WorkButton.SetActive(false);
+        changeskillButton.SetActive(false);
+        trainButton.SetActive(false);
+        backButton.SetActive(false);
     }
-
 }

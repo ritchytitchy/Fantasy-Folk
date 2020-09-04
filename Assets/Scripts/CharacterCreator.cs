@@ -12,7 +12,7 @@ public class CharacterCreator : MonoBehaviour
     public GameObject CharismaDisplay;
     public static int Charisma = 3;
     public GameObject AgeDisplay;
-    public static int Age = 3;
+    public static int Age = 16;
 
     // Update is called once per frame
     void Update()

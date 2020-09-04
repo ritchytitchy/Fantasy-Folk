@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalSkill : MonoBehaviour
+public class LevelSystem : MonoBehaviour
 {
-    public static int CurrentSkill;
-    public static int Skilllevel;
-    public static int tobenamed;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
