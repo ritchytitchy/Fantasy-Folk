@@ -16,7 +16,8 @@ public class FarmingSkill : MonoBehaviour
             farmingactive = true;
         }
 
-        public static void farmingwork()
+
+    public static void farmingwork()
         {
             farmingxp += 10;
             if (farmingxp >= farmingxptolvl)
