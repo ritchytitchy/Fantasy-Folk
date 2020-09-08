@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class LevelSystem : MonoBehaviour
 {
@@ -20,20 +21,28 @@ public class LevelSystem : MonoBehaviour
 
     void changetheskill(Dropdown changeskill)
     {
-        index = changeskill.value;
-        string selection = items[index];
-        // changestuff = skilltextbox;
-        FarmingSkill.farmingactive = false;
-        BlackSmithingSkill.blacksmithactive = false;
-        if (selection == "Farming")
+        if (changeskill.value != 0)
         {
-            FarmingSkill.farmingactive = true;
+            
+            index = changeskill.value;
+           // textbox.text = changeskill.options[index].text;
+            string selection = items[index];
+            textbox.text = selection;
+            // changestuff = skilltextbox;
+            FarmingSkill.farmingactive = false;
+            BlackSmithingSkill.blacksmithactive = false;
+            if (selection == "Farming")
+            {
+                FarmingSkill.farmingactive = true;
+            }
+            if (selection == "Blacksmithing")
+            {
+                BlackSmithingSkill.blacksmithactive = true;
+            }
         }
-        if (selection == "Blacksmithing")
-        {
-            BlackSmithingSkill.blacksmithactive = true;
-        }
-        skilldropdown.SetActive(false);
+        
+        
+
     }
     void Start()
     { 
@@ -41,33 +50,41 @@ public class LevelSystem : MonoBehaviour
  
      changeskill.options.Clear();
 
-   // List<string> items = new List<string>();
+        // List<string> items = new List<string>();
 
 
-            skilllvl = BlackSmithingSkill.blacksmithlvl;
+        items.Add("");    
+        skilllvl = FarmingSkill.farminglvl;
+        if (skilllvl >= 1)
+        {
+            items.Add("Farming");
+        }
+        skilllvl = BlackSmithingSkill.blacksmithlvl;
         if ( skilllvl >= 1)
         {
             items.Add("Blacksmithing");
         }
-        skilllvl = FarmingSkill.farminglvl;
-        if (skilllvl >= 1)
-        {
-             items.Add("Farming");
-        }
+
         foreach(var item in items)
-{
-    changeskill.options.Add(new Dropdown.OptionData() { text = item });
-}
-        DropdownItemSelected(changeskill);
-        
+        {
+         changeskill.options.Add(new Dropdown.OptionData() { text = item });
+        }
+ 
+    DropdownItemSelected(changeskill);
+
         changeskill.onValueChanged.AddListener(delegate { DropdownItemSelected(changeskill); });
-    
+
+
+
+
     }
         void DropdownItemSelected(Dropdown changeskill)
     {
-      index = changeskill.value;
-    textbox.text = changeskill.options[index].text;
+        skilldropdown.SetActive(false);
+        index = changeskill.value;
+    
        changetheskill(changeskill);
-        changeskill.onValueChanged.AddListener(delegate { changetheskill(changeskill); });
+        changeskill.value = 0;
     }
+
 }

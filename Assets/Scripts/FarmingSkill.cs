@@ -28,6 +28,17 @@ public class FarmingSkill : MonoBehaviour
             }
             GlobalCurrencies.Gold += 5 * farminglvl;
         }
+    public static void farmingtrain()
+    {
+        farmingxp += 10;
+        if (farmingxp >= farmingxptolvl)
+        {
+            farminglvl += 1;
+            farmingxp -= farmingxptolvl;
+            farmingxptolvl += 100;
+        }
 
-    
+    }
+
+
 }

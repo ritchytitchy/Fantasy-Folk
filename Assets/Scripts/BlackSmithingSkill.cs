@@ -8,9 +8,9 @@ public class BlackSmithingSkill : MonoBehaviour
 {
 
     public static bool blacksmithactive = false;
-    public static int blacksmithlvl = 1;
+    public static int blacksmithlvl = 0;
     public static int blacksmithxp = 0;
-    public static int blacksmithxptolvl = 100;
+    public static int blacksmithxptolvl = 30;
 
 
 
@@ -30,5 +30,16 @@ public class BlackSmithingSkill : MonoBehaviour
             }
             GlobalCurrencies.Gold += 10 * blacksmithlvl;
         }
+    public static void blacksmithtrain()
+    {
+        blacksmithxp += 10;
+        if (blacksmithxp >= blacksmithxptolvl)
+        {
+            blacksmithlvl += 1;
+            blacksmithxp -= blacksmithxptolvl;
+            blacksmithxptolvl += 100;
+        }
+
+    }
 
 }

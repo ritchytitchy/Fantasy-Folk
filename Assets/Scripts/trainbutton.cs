@@ -1,15 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class changeskillbutton : MonoBehaviour
+public class trainbutton : MonoBehaviour
 {
     public GameObject changeskilldropdown;
     public GameObject textbox;
- 
-    
 
 
 
@@ -17,7 +13,6 @@ public class changeskillbutton : MonoBehaviour
     {
         changeskilldropdown.SetActive(true);
         textbox.SetActive(true);
-       // LevelSystem.dropdownstarte();
 
     }
 }
