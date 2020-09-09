@@ -11,7 +11,7 @@ public class FarmingSkill : MonoBehaviour
 
 
 
-        public void Setfarmingactive()
+        public static void Setfarmingactive()
         {
             farmingactive = true;
         }
