@@ -7,24 +7,29 @@ public class Blacksmithbutton : MonoBehaviour
 {
     public GameObject blacksmithbutton;
     public GameObject textbox;
-
-
-    public  void yes(int check)
+    public static int cat;
+    public static void island(int check)
     {
-        if (check == 1)
+        cat = check;
+    }
+ 
+    public  void yes()
+    {
+        if (cat == 1)
         {
             textbox.GetComponent<Text>().text = "Blacksmithing";
             SetSkillsfalse.killthembuttens();
-            // SetSkillsfalse.noforrealnow();
             BlackSmithingSkill.Setblacksmithactive();
 
         }
-        if (check == 2)
+        if (cat == 2)
             {
-            textbox.GetComponent<Text>().text = "Blacksmithing";
-            SetSkillsfalse.killthembuttens();
-            // SetSkillsfalse.noforrealnow();
-            BlackSmithingSkill.Setblacksmithactive();
+
+
+            // BlackSmithingSkill.blacksmithtrain();
+            SetSkillsfalse.killtrain();
+            CurrentAction.setaction(cat);
+            BlackSmithingSkill.blacksmithtrainactive = true;
 
         }
     }

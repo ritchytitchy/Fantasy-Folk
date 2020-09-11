@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 154604531}
   - component: {fileID: 154604530}
   - component: {fileID: 154604532}
+  - component: {fileID: 154604533}
   m_Layer: 0
   m_Name: ButtonSystem
   m_TagString: Untagged
@@ -284,8 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 836560433}
-  farmingbutton: {fileID: 0}
-  blacksmithbutton: {fileID: 0}
+  farmingbutton: {fileID: 922664811}
+  blacksmithbutton: {fileID: 161456159}
 --- !u!114 &154604529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +344,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   farmbuttonz: {fileID: 922664811}
   blacksmithbuttonz: {fileID: 161456159}
+--- !u!114 &154604533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154604524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26c1db83b254d840a79cdcedd8058aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &161456159
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +746,7 @@ GameObject:
   - component: {fileID: 294632060}
   - component: {fileID: 294632061}
   - component: {fileID: 294632062}
+  - component: {fileID: 294632063}
   m_Layer: 0
   m_Name: GameEventSystem
   m_TagString: Untagged
@@ -816,6 +830,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HonourDisplay: {fileID: 1066632393}
   GoldDisplay: {fileID: 356939917}
+--- !u!114 &294632063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294632057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aedefe9a110eab43a694d27e9d9bf67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 182155501}
 --- !u!1 &323639351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,7 +1741,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 780102881}
   m_OnClick:
     m_PersistentCalls:
@@ -1774,7 +1801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &836560434
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2136,7 +2163,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1008924311}
   m_OnClick:
     m_PersistentCalls:
@@ -3110,7 +3137,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1627753853}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 154604533}
+        m_TargetAssemblyTypeName: EndTurn, Assembly-CSharp
+        m_MethodName: Clickend
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1627753853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3541,7 +3580,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1224189645}
         m_TargetAssemblyTypeName: CurrentSkill, Assembly-CSharp
-        m_MethodName: ClickWork
+        m_MethodName: mwork
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

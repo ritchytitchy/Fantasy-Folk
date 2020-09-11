@@ -18,19 +18,21 @@ public class changeskillbutton : MonoBehaviour
 
     public void activatedropdown()
     {
-        
+      //  BlackSmithingSkill.blacksmithactive = false;
+       // FarmingSkill.farmingactive = false;
+
         textbox.SetActive(true);
         skilllvl = FarmingSkill.farminglvl;
         if (skilllvl >= 1)
         {
             farmingbutton.SetActive(true);
-           // Farmingbutton.yes(check);
+            Farmingbutton.island(check);
         }
         skilllvl = BlackSmithingSkill.blacksmithlvl;
         if (skilllvl >= 1)
         {
             blacksmithbutton.SetActive(true);
-            //Blacksmithbutton.yes(check);
+            Blacksmithbutton.island(check);
         }
 
 

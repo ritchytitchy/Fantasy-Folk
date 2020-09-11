@@ -18,13 +18,12 @@ public class trainbutton : MonoBehaviour
     {
 
         textbox.SetActive(true);
-        {
-            farmingbutton.SetActive(true);
-        }
+        
+        farmingbutton.SetActive(true);
+        Farmingbutton.island(check);
 
-        {
-            blacksmithbutton.SetActive(true);
-        }
+        blacksmithbutton.SetActive(true);
+        Blacksmithbutton.island(check);
 
 
     }

@@ -11,12 +11,14 @@ public class SetSkillsfalse : MonoBehaviour
     public static void killthembuttens()
     {
         BlackSmithingSkill.blacksmithactive = false;
-        FarmingSkill.farmingactive = false;
-        
-
-
-
+        FarmingSkill.farmingactive = false;   
     }
+    public static void killtrain()
+    {
+        BlackSmithingSkill.blacksmithtrainactive = false;
+        FarmingSkill.farmingtrainactive = false;
+    }
+
     public void noforrealnow()
     {
         blacksmithbuttonz.SetActive(false);

@@ -7,23 +7,37 @@ public class Farmingbutton : MonoBehaviour
 {
     public GameObject farmbutton;
     public GameObject textbox;
+    public static int cat;
 
-
-    public void yes(int check)
+    void Start()
     {
-        if (check == 1)
+        textbox.GetComponent<Text>().text = "Farming";
+    }
+
+    public static void island(int check) 
         {
-            textbox.GetComponent<Text>().text = "Farming";
-            SetSkillsfalse.killthembuttens();
-            // SetSkillsfalse.noforrealnow();
-            FarmingSkill.Setfarmingactive();
+        cat = check;
+
         }
-        if (check == 2)
+
+    public void magic()
+    {
+        
+    }
+    public  void yes()
+    {
+        textbox.GetComponent<Text>().text = "Farming";
+        if (cat == 1)
         {
-            textbox.GetComponent<Text>().text = "Farming";
             SetSkillsfalse.killthembuttens();
-            // SetSkillsfalse.noforrealnow();
             FarmingSkill.Setfarmingactive();
+            
+        }
+        if (cat == 2)
+        {
+            SetSkillsfalse.killtrain();
+            CurrentAction.setaction(cat);
+            FarmingSkill.farmingtrainactive = true;
         }
 
     }
