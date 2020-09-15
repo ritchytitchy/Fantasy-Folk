@@ -6,16 +6,18 @@ using UnityEngine;
 public class EndTurn : MonoBehaviour
 {
     public static bool activeskill;
-    public static int actionz;
+    public static int actionz = 0;
+    public static string error = "Please Select an action";
     public static void grabaction(int fun)
     {
         actionz = fun;
     }
     public void Clickend()
     {
+        Date.thedate();
         if (actionz == 1)
         {
-
+            
             activeskill = BlackSmithingSkill.blacksmithactive;
             if (activeskill == true)
             {
@@ -29,7 +31,7 @@ public class EndTurn : MonoBehaviour
         }
         if (actionz == 2)
         {
-
+            
             activeskill = BlackSmithingSkill.blacksmithtrainactive;
             if (activeskill == true)
             {

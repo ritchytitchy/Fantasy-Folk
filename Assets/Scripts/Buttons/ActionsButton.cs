@@ -12,11 +12,13 @@ public class ActionsButton : MonoBehaviour
     public GameObject trainButton;
     public GameObject familyButton;
     public GameObject backButton;
+    public static int skeeter = 1;
 
     //function when the button is clicked
     public void ClickActionButton()
         {
-            actionButton.SetActive(false);
+        Backbutton.getdunked(skeeter);
+        actionButton.SetActive(false);
             PropertiesButton.SetActive(false);
             StatsButton.SetActive(false);
             familyButton.SetActive(false);
