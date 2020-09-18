@@ -12,8 +12,12 @@ public class BlackSmithingSkill : MonoBehaviour
     public static int blacksmithlvl = 0;
     public static int blacksmithxp = 0;
     public static int blacksmithxptolvl = 30;
+    public GameObject blacksmithlvltext;
 
-
+    void Update()
+    {
+        blacksmithlvltext.GetComponent<Text>().text = "Blacksmithlvl: " + blacksmithlvl;
+    }
 
         public static void Setblacksmithactive()
         {
@@ -47,5 +51,6 @@ public class BlackSmithingSkill : MonoBehaviour
         }
 
     }
+
 
 }

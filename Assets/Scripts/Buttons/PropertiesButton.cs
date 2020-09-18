@@ -20,6 +20,9 @@ public class PropertiesButton : MonoBehaviour
     public GameObject housetext;
     public GameObject farmtext;
     public GameObject forgetext;
+    public GameObject houseprtext;
+    public GameObject farmprtext;
+    public GameObject forgeprtext;
     public static int skeet = 2;
 
 
@@ -42,6 +45,9 @@ public class PropertiesButton : MonoBehaviour
         housetext.SetActive(true);
         farmtext.SetActive(true);
         forgetext.SetActive(true);
+        houseprtext.SetActive(true);
+        farmprtext.SetActive(true);
+        forgeprtext.SetActive(true);
     }
     void Update()
     {

@@ -18,9 +18,10 @@ public class Properties : MonoBehaviour
     public GameObject numfar;
     public GameObject numforg;
     public GameObject houpr;
+    public static int fgold;
     public GameObject farpr;
     public GameObject forpr;
-    public static int fgold = GlobalCurrencies.Gold;
+   
     public static int inrent()
     {
        int rent = (hou * 6) + (far * 3) + (forg * 10);
@@ -30,6 +31,7 @@ public class Properties : MonoBehaviour
 
     public static void buyhou()
     {
+      
         if (fgold >= coshou)
         {
             GlobalCurrencies.Gold -= coshou;
@@ -117,6 +119,7 @@ public class Properties : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fgold = GlobalCurrencies.Gold;
         numhou.GetComponent<Text>().text = "Houses: " + hou;
         numfar.GetComponent<Text>().text = "Farms: " + far;
         numforg.GetComponent<Text>().text = "Forges: " + forg;

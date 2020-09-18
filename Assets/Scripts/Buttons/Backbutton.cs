@@ -24,6 +24,9 @@ public class Backbutton : MonoBehaviour
     public GameObject housetext;
     public GameObject farmtext;
     public GameObject forgetext;
+    public GameObject houseprtext;
+    public GameObject farmprtext;
+    public GameObject forgeprtext;
 
     public static void getdunked(int thepass)
     {
@@ -61,6 +64,9 @@ public class Backbutton : MonoBehaviour
             housetext.SetActive(false);
             farmtext.SetActive(false);
             forgetext.SetActive(false);
+            houseprtext.SetActive(false);
+            farmprtext.SetActive(false);
+            forgeprtext.SetActive(false);
         }
 
 }
